@@ -61,10 +61,14 @@ class AddEditForm extends React.Component {
         id: this.state.id,
         pri: this.state.pri,
         title: this.state.title,
-        appears_day: this.state.frequency,
+        appears_day: this.state.appears_day,
+        frequency: this.state.frequency,
         rating_type: this.state.rating_type,
         required: this.state.required,
-        conditions: this.state.conditions
+        conditions: this.state.conditions,
+        teaming_stages: this.state.teaming_stages,
+        role: this.state.role,
+        mapping: this.state.mapping
       })
     })
       .then(response => response.json())
@@ -83,8 +87,16 @@ class AddEditForm extends React.Component {
   componentDidMount(){
     // if item exists, populate the state with proper data
     if(this.props.item){
-      const { id, pri, last, email, phone, location, hobby } = this.props.item
-      this.setState({ id, pri, last, email, phone, location, hobby })
+      const {
+        id, pri, title, frequency, appears_day,
+        rating_type, conditions, required, teaming_stages, role, mapping
+      } = this.props.item
+      this.setState(
+        {
+          id, pri, title, frequency, appears_day, rating_type, conditions,
+          required, teaming_stages, role, mapping
+        }
+      )
     }
   }
 
@@ -109,7 +121,7 @@ class AddEditForm extends React.Component {
         </FormGroup>
         <FormGroup>
           <Label for="rating_type">Rating Type</Label>
-          <Input type="text" name="rating_type" id="rating_type" onChange={this.onChange} value={this.state.rating_type === null ? '' : this.state.rating_type}  placeholder="City, State" />
+          <Input type="text" name="rating_type" id="rating_type" onChange={this.onChange} value={this.state.rating_type === null ? '' : this.state.rating_type}  placeholder="Rating Type" />
         </FormGroup>
         <FormGroup>
           <Label for="required">Required</Label>
