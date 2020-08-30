@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap'
 import ModalForm from './Components/Modals/Modal'
 import DataTable from './Components/Tables/DataTable'
 import { CSVLink } from "react-csv"
+import { API_URL } from './config'
 
 class App extends Component {
   state = {
@@ -10,7 +11,7 @@ class App extends Component {
   }
 
   getItems(){
-    fetch('http://localhost:3001/api/v1/questions')
+    fetch(API_URL + '/api/v1/questions')
       .then(response => response.json())
       .then(items => this.setState({items}))
       .catch(err => console.log(err))
