@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Table, Button } from 'reactstrap';
 import ModalForm from '../Modals/Modal'
-import { API_URL } from './config'
+import { API_URL } from '../../config'
 
 class DataTable extends Component {
 
