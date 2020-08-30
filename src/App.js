@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   getItems(){
-    fetch(API_URL + '/api/v1/questions')
+    fetch(API_URL + '/questions')
       .then(response => response.json())
       .then(items => this.setState({items}))
       .catch(err => console.log(err))

@@ -22,7 +22,7 @@ class AddEditForm extends React.Component {
 
   submitFormAdd = e => {
     e.preventDefault()
-    fetch(API_URL + '/api/v1/questions', {
+    fetch(API_URL + '/questions', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ class AddEditForm extends React.Component {
 
   submitFormEdit = e => {
     e.preventDefault()
-    fetch(API_URL + '/api/v1/questions', {
+    fetch(API_URL + '/questions', {
       method: 'put',
       headers: {
         'Content-Type': 'application/json'

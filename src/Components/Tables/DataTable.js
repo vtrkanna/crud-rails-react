@@ -8,7 +8,7 @@ class DataTable extends Component {
   deleteItem = id => {
     let confirmDelete = window.confirm('Delete item forever?')
     if(confirmDelete){
-      fetch(API_URL + '/api/v1/questions', {
+      fetch(API_URL + '/questions', {
       method: 'delete',
       headers: {
         'Content-Type': 'application/json'
