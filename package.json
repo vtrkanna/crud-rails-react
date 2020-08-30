@@ -1,6 +1,11 @@
 {
   "name": "crud-rails-react",
   "version": "0.1.0",
+  "description": "CRUD RAILS REACT EXAMPLE",
+  "engines": {
+    "node": "12.x",
+    "yarn": "1.x"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
