@@ -1,5 +1,5 @@
 
-const SERVER_NAME = 'localhost:3001';
+const SERVER_NAME = 'crud-rails-react-api.herokuapp.com';
 
 export const BASE_URL = 'https://' + SERVER_NAME;
 
