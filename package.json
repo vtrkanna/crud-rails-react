@@ -4,7 +4,6 @@
   "description": "CRUD RAILS REACT EXAMPLE",
   "engines": {
     "node": "12.x",
-    "yarn": "1.x",
     "npm": "6.x"
   },
   "private": true,
